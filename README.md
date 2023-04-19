@@ -15,6 +15,23 @@ Source your bash config (i.e., `~/.zshrc` or `~/.bashrc`) or start a new termina
 tsh
 ```
 
+## Example
+
+```
+Tailscale SSH v0.0.1
+
+Select one option using up/down keys and enter to confirm:
+
+   john
+   kevin
+   chris
+
+Username: ubuntu
+
+Running SSH Command...
+  ssh -A ubuntu@kevin
+```
+
 ## Acknowledgements
 
 - [Alexander Klimetschek](https://unix.stackexchange.com/a/415155) for the bash selector script.
