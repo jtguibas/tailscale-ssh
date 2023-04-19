@@ -4,8 +4,8 @@ echo Installing Tailscale SSH...
 SUCCINCT_DIR=${SUCCINCT_DIR-"$HOME/.succinct"}
 SUCCINCT_BIN_DIR="$SUCCINCT_DIR/bin"
 
-BIN_URL="https://github.com/succinctlabs/succinct-ssh/blob/main/succinct-ssh"
-BIN_PATH="$SUCCINCT_BIN_DIR/succinct-ssh"
+BIN_URL="https://raw.githubusercontent.com/jtguibas/tailscale-ssh/main/tailscale-ssh"
+BIN_PATH="$SUCCINCT_BIN_DIR/tailscale-ssh"
 
 # Create the .succinct bin directory and succinct-ssh binary if it doesn't exist.
 mkdir -p $SUCCINCT_BIN_DIR
