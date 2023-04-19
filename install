@@ -5,7 +5,7 @@ TAILSCALE_SSH_DIR=${TAILSCALE_SSH_DIR-"$HOME/.tailscale-ssh"}
 TAILSCALE_SSH_BIN_DIR="$TAILSCALE_SSH_DIR/bin"
 
 BIN_URL="https://raw.githubusercontent.com/jtguibas/tailscale-ssh/main/tailscale-ssh"
-BIN_PATH="$TAILSCALE_SSH_BIN_DIR/tailscale-ssh"
+BIN_PATH="$TAILSCALE_SSH_BIN_DIR/tsh"
 
 # Create the .tailscale-ssh bin directory and tailscale-ssh binary if it doesn't exist.
 mkdir -p $TAILSCALE_SSH_BIN_DIR
@@ -42,4 +42,4 @@ if [[ ":$PATH:" != *":${TAILSCALE_SSH__BIN_DIR}:"* ]]; then
 fi
 
 echo && echo "Detected your preferred shell is ${PREF_SHELL} and added tailscale-ssh to PATH. Run 'source ${PROFILE}' or start a new terminal session to use tailscale-ssh."
-echo "Then, simply run 'tailscale-ssh' to connect to servers in our Tailscale network."
+echo "Then, simply run 'tsh' to connect to servers in our Tailscale network."
