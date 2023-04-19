@@ -1,14 +1,14 @@
 #!/usr/bin/env bash
 echo Installing Tailscale SSH...
 
-SUCCINCT_DIR=${SUCCINCT_DIR-"$HOME/.succinct"}
-SUCCINCT_BIN_DIR="$SUCCINCT_DIR/bin"
+TAILSCALE_SSH_DIR=${TAILSCALE_SSH_DIR-"$HOME/.tailscale-ssh"}
+TAILSCALE_SSH_BIN_DIR="$TAILSCALE_SSH_DIR/bin"
 
 BIN_URL="https://raw.githubusercontent.com/jtguibas/tailscale-ssh/main/tailscale-ssh"
-BIN_PATH="$SUCCINCT_BIN_DIR/tailscale-ssh"
+BIN_PATH="$TAILSCALE_SSH_BIN_DIR/tailscale-ssh"
 
-# Create the .succinct bin directory and succinct-ssh binary if it doesn't exist.
-mkdir -p $SUCCINCT_BIN_DIR
+# Create the .tailscale-ssh bin directory and tailscale-ssh binary if it doesn't exist.
+mkdir -p $TAILSCALE_SSH_BIN_DIR
 curl -# -L $BIN_URL -o $BIN_PATH
 chmod +x $BIN_PATH
 
@@ -31,15 +31,15 @@ case $SHELL in
     PREF_SHELL=ash
     ;;
 *)
-    echo "succinct-ssh: could not detect shell, manually add ${SUCCINCT_BIN_DIR} to your PATH."
+    echo "tailscale-ssh: could not detect shell, manually add ${TAILSCALE_SSH_BIN_DIR} to your PATH."
     exit 1
 esac
 
-# Only add succinct-ssh if it isn't already in PATH.
-if [[ ":$PATH:" != *":${SUCCINCT__BIN_DIR}:"* ]]; then
-    # Add the succinct-ssh directory to the path and ensure the old PATH variables remain.
-    echo >> $PROFILE && echo "export PATH=\"\$PATH:$SUCCINCT_BIN_DIR\"" >> $PROFILE
+# Only add tailescale-ssh if it isn't already in PATH.
+if [[ ":$PATH:" != *":${TAILSCALE_SSH__BIN_DIR}:"* ]]; then
+    # Add the tailscale-ssh directory to the path and ensure the old PATH variables remain.
+    echo >> $PROFILE && echo "export PATH=\"\$PATH:$TAILSCALE_SSH_BIN_DIR\"" >> $PROFILE
 fi
 
-echo && echo "Detected your preferred shell is ${PREF_SHELL} and added succinct-ssh to PATH. Run 'source ${PROFILE}' or start a new terminal session to use succinct-ssh."
-echo "Then, simply run 'succinct-ssh' to connect to servers in our Tailscale network."
+echo && echo "Detected your preferred shell is ${PREF_SHELL} and added tailscale-ssh to PATH. Run 'source ${PROFILE}' or start a new terminal session to use tailscale-ssh."
+echo "Then, simply run 'tailscale-ssh' to connect to servers in our Tailscale network."
