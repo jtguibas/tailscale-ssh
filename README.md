@@ -8,3 +8,8 @@ simplify your SSH connections before connecting to servers in your Tailscale net
 ```
 curl -L https://ssh.succinct.xyz | bash
 ```
+
+## Acknowledgements
+
+- [Alexander Klimetschek](https://unix.stackexchange.com/a/415155) for the bash selector script.
+- [Foundry](https://raw.githubusercontent.com/foundry-rs/foundry/master/foundryup/install) for the instlal script.
