@@ -18,4 +18,4 @@ tsh
 ## Acknowledgements
 
 - [Alexander Klimetschek](https://unix.stackexchange.com/a/415155) for the bash selector script.
-- [Foundry](https://raw.githubusercontent.com/foundry-rs/foundry/master/foundryup/install) for the instlal script.
+- [Foundry](https://raw.githubusercontent.com/foundry-rs/foundry/master/foundryup/install) for the install script.
